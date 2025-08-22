@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - MC YUNG JESSE</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MC YUNG<span>JESSE</span></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Book Our Services</h1>
+    <p>Choose from our featured services and reserve your spot instantly.</p>
+  </section>
+
+  <!-- FEATURED SERVICES -->
+  <section class="booking-services">
+    <div class="service-card">
+      <h3>Wedding Ceremony</h3>
+      <p>Professional wedding moderators to ensure a smooth and joyful experience.</p>
+      <p class="price">$500</p>
+      <button class="book-btn" data-service="Wedding Moderation" data-price="$500">Book Now</button>
+    </div>
+
+    <div class="service-card">
+      <h3>Corporate Events</h3>
+      <p>Engaging hosts for conferences, seminars, and business summits.</p>
+      <p class="price">$800</p>
+      <button class="book-btn" data-service="Corporate Events" data-price="$800">Book Now</button>
+    </div>
+
+    <div class="service-card">
+      <h3>Birthday Parties</h3>
+      <p>Fun and interactive moderation to keep your guests entertained.</p>
+      <p class="price">$300</p>
+      <button class="book-btn" data-service="Birthday Parties" data-price="$300">Book Now</button>
+    </div>
+
+    <div class="service-card">
+      <h3>Charity Events</h3>
+      <p>Inspirational hosting that resonates with donors and attendees.</p>
+      <p class="price">$400</p>
+      <button class="book-btn" data-service="Charity Events" data-price="$400">Book Now</button>
+    </div>
+  </section>
+
+<!-- BOOKING MODAL -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="bookingTitle">Book Service</h2>
+
+    <!-- Formspree Form -->
+    <form id="bookingForm" action="https://formspree.io/f/xblkpvpk" method="POST">
+      <input type="hidden" name="Service" id="selectedService">
+      <input type="hidden" name="Price" id="selectedPrice">
+
+      <input type="text" id="clientName" name="Name" placeholder="Your Name" required>
+      <input type="email" id="clientEmail" name="Email" placeholder="Your Email" required>
+      <input type="date" id="bookingDate" name="Date" required>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 MC JUNG JESSE. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
